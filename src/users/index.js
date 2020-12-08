@@ -44,10 +44,37 @@ router.post("/", (req, res) =>{
 
     res.status(201).send(newUser.ID)
 })
+//edit user
+router.put("/:id", (req, res) =>{
+    const usersFilePath = path.join(__dirname, "users.json")
+    const fileAsBuffer = fs.readFileSync(usersFilePath)
+    const fileAsAString = fileAsBuffer.toString()
+    const usersArray = JSON.parse(fileAsAString)
 
-router.post("/", (req, res) =>{
-    
-    res.send("Single users route")
+    const newUsersArray = usersArray.filter(user => user.ID !== req.params.id)
+
+    const modifiedUser = req.body
+    modifiedUser.ID = req.params.id
+
+    newUsersArray.push(modifiedUser)
+
+    fs.writeFileSync(usersFilePath, JSON.stringify(newUsersArray))
+    res.send("User edited")
+})
+//delete user
+router.delete("/:id", (req, res) =>{
+    const usersFilePath = path.join(__dirname, "users.json")
+    const fileAsBuffer = fs.readFileSync(usersFilePath)
+    const fileAsAString = fileAsBuffer.toString()
+    const usersArray = JSON.parse(fileAsAString)
+
+    const newUsersArray = usersArray.filter(user => user.ID !== req.params.id)
+
+
+    fs.writeFileSync(usersFilePath, JSON.stringify(newUsersArray))
+
+
+    res.send("Delete users route")
 })
 
 
