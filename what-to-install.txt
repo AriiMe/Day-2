@@ -1,0 +1,2 @@
+npm init -y
+npm i -D nodemon // you dont need to restart server for every change
