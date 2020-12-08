@@ -1,27 +1,28 @@
 {
-  "name": "Day-1",
+  "name": "day2",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./server.js"
+    "dev": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AriiMe/Day-1.git"
+    "url": "git+https://github.com/AriiMe/Day-2.git"
   },
   "keywords": [],
   "author": "Ari",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AriiMe/Day-1/issues"
+    "url": "https://github.com/AriiMe/Day-2/issues"
   },
-  "homepage": "https://github.com/AriiMe/Day-1#readme",
+  "homepage": "https://github.com/AriiMe/Day-2#readme",
   "devDependencies": {
     "nodemon": "^2.0.6"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uniqid": "^5.2.0"
   }
 }
