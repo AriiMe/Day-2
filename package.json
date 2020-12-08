@@ -12,7 +12,7 @@
     "url": "git+https://github.com/AriiMe/Day-1.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ari",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AriiMe/Day-1/issues"
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/AriiMe/Day-1#readme",
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
